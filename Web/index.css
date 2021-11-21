@@ -1,0 +1,12 @@
+body{
+    background: gray;
+}
+.xd{
+    height: 200px;
+    background-color: lightblue;
+    width: 100%;
+    text-align: center;
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
+}
