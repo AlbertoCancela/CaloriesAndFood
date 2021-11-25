@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="cuerpoFront.css">
     
-    <title>index</title>
+    <title>C&C</title>
 </head>
 <body>
     <!-------------------------------------navBar--------------------------------------------------->
@@ -36,11 +36,61 @@
         <li><a href="#" id="enlaceF8">¿Cuál es la finalidad de esta página?</a></li>
     </div>
     <div class="cuerpoCaj" id="c2">
-        <div class="contenidoC2">Firs</div>
-        <div class="contenidoC2">2</div>
-        <div class="contenidoC2">3</div>
+        <p id="tituloC2">Ejemplo de comidas al día en relación a sus calorías</p>
+        <div class="contenidoC2">Desayuno</div>
+        <div class="contenidoC2">Comida</div>
+        <div class="contenidoC2">Cena</div>
     </div>
-    <div class="cuerpoCaj" id="c3">Caja3</div>
+    <script type="text/javascript">
+        function InMC(){
+            var peso = document.getElementById('num1').value;
+            var altura = document.getElementById('num2').value;
+            if (peso == 0 || altura == 0)
+            {
+                alert("Imposible que su peso/altura sea 0...");
+            }
+            else if (peso > 600) {
+                alert("Peso exorbitante, introduzca su peso real en Kg");
+            }
+            else if (altura > 2.7) {
+                alert("Altura exorbitante, introduzca su altura real en metros");
+            }
+            else{
+                IMC=peso / Math.pow(altura,2)
+                document.getElementById('res').value = IMC;
+                if (IMC < 18.5)
+                {
+                    document.getElementById('diagnostico').value="Bajo Peso";
+                }
+                else if (IMC > 18.5 && IMC <= 24.9){
+                    document.getElementById('diagnostico').value="Peso Normal";
+                }
+                else if (IMC > 25.0 && IMC <= 29.9){
+                    document.getElementById('diagnostico').value="Sobrepeso";
+                }
+                else if (IMC > 29.9){
+                    document.getElementById('diagnostico').value="Obesidad";
+                }
+            }
+            
+        }
+    </script>
+    <div class="cuerpoCaj" id="c3">
+        <p id="encabezado">Índice de Masa Corporal</p>
+        <br>
+        <p id="subtituloMC">Ingrese los datos para</p><p id="subtituloMC">obtener su resultado</p>
+        <p id="alturaP">Altura</p>
+        <input type="number" name="altura" id="num2" placeholder="en metros">
+        <p id="pesoP">Peso</p>
+        <input type="number" name="peso" id="num1" placeholder="en kilos"> <br><br>
+        <input type="button" value="IMC" id=btnIMC"" onclick="InMC()"> <br><br>
+        <input type="text" name="resultado" id="res" readonly="" placeholder="Resultado"> <br><br>
+        <div id="diagnosSep"> 
+            <br>
+            <p>Diagnóstico</p> <br>
+            <input type="text" id="diagnostico" placeholder="---">
+        </div>
+    </div>
     <!-------------------------------------Fin-cuerpoFront------------------------------------------>
     
     <div class="xd">Ejemplos</div>
