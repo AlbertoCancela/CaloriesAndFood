@@ -28,7 +28,7 @@
     color: whitesmoke;
     display: block;
     background-color: purple;
-    margin: 13px 8px;
+    margin: 12px 8px;
 }
 .cuerpoCaj #enlaceF1{
     padding: 19px 2px;
@@ -95,6 +95,7 @@
 #c3{
     position: fixed;
     right: 12px;
+    top: 64px;
     width: 20%;
     height: 390px;
     background-color: #fcff55;
@@ -130,4 +131,25 @@
     color: rgb(211, 7, 7);
     font-weight: bold;
     font-style: italic;
+}
+.textoFront{
+    width: 75%;
+    background-color: white;
+    font-weight: bold;
+    font-style: italic;
+    margin-left: 40px;
+}
+#textQSLC
+{
+    margin-top: 250px;
+}
+.textoFront h2 {
+    margin-top: 20px;
+    text-align: justify;
+    
+}
+.textoFront p {
+    font-weight: normal;
+    font-style: normal;
+    text-align: justify;
 }

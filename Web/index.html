@@ -12,7 +12,7 @@
 </head>
 <body>
     <!-------------------------------------navBar--------------------------------------------------->
-    <img src="C:\WorkSpace\SE&LI _Project\Web\Media\inicio\Logo.png" width="130" height="110" id="imgLogo">
+    <img src="C:\WorkSpace\SE&LI _Project\Web\Media\inicio\Logo.png" width="130.5" height="110" id="imgLogo">
     <img src="C:\WorkSpace\SE&LI _Project\Web\Media\inicio\ttl.png" width="300" height="110" id="imgTtl">
         <div class="divNBar">
             <ul class="barraNavegacion">
@@ -26,14 +26,14 @@
     <!-------------------------------------cuerpoFront---------------------------------------------->
     <div class="rellenotp">Relleno</div>
     <div class="cuerpoCaj" id="c1">
-        <li><a href="#" id="enlaceF1">¿Qué son las calorías?</a></li>
-        <li><a href="#" id="enlaceF2">¿Cuántas calorías tiene cada alimento?</a></li>
-        <li><a href="#" id="enlaceF3">¿Qué son la Kcal?</a></li>
-        <li><a href="#" id="enlaceF4">¿Cómo sé cuántas calorías comer?</a></li>
-        <li><a href="#" id="enlaceF5">¿Qué es el índice de masa corporal?</a></li>
-        <li><a href="#" id="enlaceF6">Cálculo de índice de masa corporal</a></li>
-        <li><a href="#" id="enlaceF7">¿Por qué debería saber todo esto?</a></li>
-        <li><a href="#" id="enlaceF8">¿Cuál es la finalidad de esta página?</a></li>
+        <li><a href="#textCalorias" id="enlaceF1">¿Qué son las calorías?</a></li>
+        <li><a href="#textQSLC" id="enlaceF2">¿Cuántas calorías tiene cada alimento?</a></li>
+        <li><a href="#textCuantasCA" id="enlaceF3">¿Qué son la Kcal?</a></li>
+        <li><a href="#textQSLK" id="enlaceF4">¿Cómo sé cuántas calorías comer?</a></li>
+        <li><a href="#textCCC" id="enlaceF5">¿Qué es el índice de masa corporal?</a></li>
+        <li><a href="#textIMC" id="enlaceF6">Cálculo de índice de masa corporal</a></li>
+        <li><a href="#textCIMC" id="enlaceF7">¿Por qué debería saber todo esto?</a></li>
+        <li><a href="#textSaberEsto" id="enlaceF8">¿Cuál es la finalidad de esta página?</a></li>
     </div>
     <div class="cuerpoCaj" id="c2">
         <p id="tituloC2">Ejemplo de comidas al día en relación a sus calorías</p>
@@ -89,29 +89,77 @@
         <div id="diagnosSep"> 
             <br>
             <p>Diagnóstico</p> <br>
-            <input type="text" id="diagnostico" placeholder="---">
+            <input type="text" id="diagnostico" placeholder="---" readonly="">
         </div>
     </div>
     <!-------------------------------------Fin-cuerpoFront------------------------------------------>
     
-    <div class="xd">Ejemplos</div>
-    <div class="xd">Ejemplos</div>
-    <div class="xd">Ejemplos</div>
-    <div class="xd">Ejemplos</div>
-    <div class="xd">Ejemplos</div>
-    <div class="xd">Ejemplos</div>
-    <div class="xd">Ejemplos</div>
-    <div class="xd">Ejemplos</div>
-    <div class="xd">Ejemplos</div>
-    <div class="xd">Ejemplos</div>
-    <div class="xd">Ejemplos</div>
-    <div class="xd">Ejemplos</div>
-    <div class="xd">Ejemplos</div>
-    <div class="xd">Ejemplos</div>
-    <div class="xd">Ejemplos</div>
-    <div class="xd">Ejemplos</div>
-    <div class="xd">Ejemplos</div>
-    
-
+    <div class="xd"></div>
+    <div class="xd"></div>
+    <div id="textCalorias"></div>
+    <div class="textoFront">
+        <h2 id="textQSLC">¿Qué son las calorías?</h2>
+        <p>Una caloría es una unidad de medida, pero esta no mide peso ni longitud. 
+            Una caloría es una unidad de energía. Cuando escuchas que algo contiene 100 calorías, 
+            es una manera de describir la cantidad de energía que podría recibir tu cuerpo al consumir eso.</p>
+        <h2 id="textCuantasCA">¿Cuántas calorías tiene cada alimento?</h2>
+        <p>Cada aimento contiene una cantidad de calorías definida dependiendo esto del gramaje de dicho alimento
+            y la naturaleza de este, por ejemplo, 100gr de carne no tendrán la misma cantidad de calorías que 100gr
+            de queso, o una manzana que pese lo mismo que una pera, etc. Existen una gran cantidad de alimentos,
+            por lo que es difícil consultar cada uno de esos cada vez que se requiera la cantidad calórica de 
+            acuerdo al gramaje de estos, pero, en el apartado de nuestra página de <a href="#">Calorías por Alimento</a>
+            podrás encontrar información relacionada a esto de los alimentos y platillos más comunes.
+        </p>
+        <h2 id="textQSLK">¿Qué son las Kcal?</h2>
+        <p>
+            Kcal simboliza una kilocaloría. Una kilocaloría es una unidad de energía térmica donde <b>1 kilocaloría</b> 
+            equivale a <b>4,1868 kilojulio</b> (KJ), y, asimismo, a <b>1000 calorías</b> (cal).<br>
+            La kilocaloría (kcal) suele ser usada como sinónimo de calorías (cal). En biología, ambos términos solían ser 
+            equivalentes. Además, en el uso cotidiano, se abrevia kilocalorías como calorías. Para diferenciarlas, es 
+            conveniente ver si su símbolo es kcal (de kilocaloría) o cal (para caloría).
+        </p>
+        <h2 id="textCCC">¿Cómo sé cuántas calorías comer?</h2>
+        <p>Las admisiones diarias recomendadas de la caloría en los E.E.U.U. son alrededor 2500 para los hombres y 2000
+            para las mujeres. Sin embargo, esto colocará del diario kcal alrededor 1000 para un niño a tanto como el 
+            diario kcal 3200 para un varón joven de 16-18 años que lleve una forma de vida activa, claramente, todo esto
+            dependiendo del tipo de vida que se lleve, la edad, peso, metas, etc.</p>
+        <h2 id="textIMC">¿Qué es el índice de masa corporal??</h2>
+        <p>
+            ¿Qué es el índice de masa corporal?
+            El índice de masa corporal (IMC) es un número que se calcula con base en el peso y la estatura de 
+            la persona. Para la mayoría de las personas, el IMC es un indicador confiable de la gordura y se 
+            usa para identificar las categorías de peso que pueden llevar a problemas de salud.
+        </p>
+        <h2 id="textCIMC">Cálculo de índice de masa corporal</h2>
+        <p>
+            ¿Cómo se calcula el IMC? Con el sistema métrico, la fórmula para el IMC es el peso en kilogramos 
+            dividido por la estatura en metros cuadrados. Debido a que la estatura por lo general se mide en 
+            centímetros, divida la estatura en centímetros por 100 para obtener la estatura en metros.
+            Por ejemplo, si mido 1.70m (170cm) y peso 65kg, entonces la operación correcta sería: <br><br>
+            kg/m^2    --->    65/1.70^2    --->    65/2.89 = 22.49
+        </p>
+        <h2 id="textSaberEsto">¿Por qué debería saber todo esto?</h2>
+        <p>
+            Es importante saber cuántas calorías tiene un alimento o comida si se quiere llevar una vida sana
+            libre de complicaciones a la hora de alimentarnos, por otra parte, muchas personas lo necesitan para 
+            tener un control de sus enfermedades relacionadas a la alimentación. A los deportistas para poder tener
+            en cuenta cuántas calorías ingerir para bajar o subir su peso o masa corporal.<br>
+            Por parte del IMC, el exceso de peso y los riesgos de salud, como la diabetes, van de la mano. Entonces
+            si su determinación de IMC es superior a lo normal, al bajar de peso, aunque sean pocos kilos, es decir, 
+            del 5% al 10% de su peso corporal total, obtendrá beneficios para su salud. 
+        </p>
+        <h2 id="textFinalidadPag">¿Cuál es la finalidad de esta página?</h2>
+        <P>
+            Esta página es un proyecto es de índole escolar, por lo que no tiene la finalidad de generar ingresos. 
+            Este proyecto está diseñado por los alumnos de ingeniería en sistemas computacionales como proyecto 
+            final de la materia de Ingeniería de Software, con la finalidad de crear conciencia en las personas 
+            sobre cuántas calorías come con cada comida / alimento y ayudando a estas a tener una vida más saludable
+            dentro de lo posible.
+        </P>
+    </div>
+    <div class="xd"></div>
+    <div class="xd"></div>
+    <div class="xd"></div>
+    <footer></footer>
 </body>
 </html>
