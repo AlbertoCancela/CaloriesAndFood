@@ -1,0 +1,39 @@
+* { margin:0; padding:0; box-sizing:border-box; }
+.tipoAlimento{
+    position: fixed;
+    left: 1px;
+    top: 64px;
+    width: 21%;
+    height: 540px;
+    background-color: black;
+    margin: 54px 0px 0px 10px;
+    text-align: center;
+}
+.platillos{
+    width: 76%;
+    display: inline-block;
+    height: auto;
+    margin: 120px 0px 0px 304px;
+    background-color: #009468;
+}
+.platillosInside{
+    display: inline-block;
+    background-color: black;
+    width: 22%;    
+    height: 340px;
+    margin: 15px 0px 0px 18px;
+}
+.platillos :hover{
+    outline-color: white;
+    outline-width: 1px;
+    outline-style: auto;
+}
+#platillo1{
+    margin-left: 25.5px;
+}
+#platillo5{
+    margin-left: 25.5px;
+}
+#platillo9{
+    margin-left: 25.5px;
+}
