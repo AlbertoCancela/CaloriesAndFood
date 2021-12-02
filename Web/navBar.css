@@ -47,9 +47,9 @@ img{
     border-style: solid;
     border-width: 1px;
     border-color: wheat;
-    
-    
+    border-radius: 4px;
 }
+
 .barraNavegacion li{
     display: inline-block;
     text-align: center;
@@ -60,4 +60,5 @@ img{
     border-style: solid;
     border-width: 1px;
     border-color: yellow;
+    transition: all 0.4s;
 }

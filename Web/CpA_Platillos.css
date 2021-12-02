@@ -1,4 +1,5 @@
 * { margin:0; padding:0; box-sizing:border-box; }
+/*Casillas de selección*/
 .tipoAlimento{
     position: fixed;
     left: 1px;
@@ -9,6 +10,57 @@
     margin: 54px 0px 0px 10px;
     text-align: center;
 }
+.tipoAlimento li {
+    padding: 20px;
+    display: inline-block;
+    background-color: purple;
+    border-style: solid;
+    width: 45%;
+    height: 75px;
+    border-width: 0.5px;
+    border-style: solid;
+    border-color: wheat;
+    margin: 24px 4px 0px 4px;
+}
+.tipoAlimento li:hover{
+    outline: floralwhite;
+    outline-width: medium;
+    outline-style: groove;
+    transition: all 0.1s;
+}
+#selectTA1{
+    background-color: black;
+    border-color: black;
+}
+#selectTA2{
+    background-color: gray;
+}
+#selectTA3{
+    background-color: red;
+}
+#selectTA4{
+    background-color:green;
+}
+#selectTA5{
+    background-color: blue;
+}
+#selectTA6{
+    background-color: yellow;
+}
+#selectTA7{
+    background-color: rgb(230, 26, 60);
+}
+#selectTA8{
+    background-color: rgb(37, 187, 24);
+}
+#selectTA9{
+    background-color: lightseagreen;
+}
+#selectTA10{
+    background-color: orange;
+}
+/*Fin de casillas de selección*/
+/*PLatillos*/
 .platillos{
     width: 76%;
     display: inline-block;
@@ -25,9 +77,11 @@
 }
 .platillos :hover{
     outline-color: white;
-    outline-width: 1px;
+    outline-width: 4px;
     outline-style: auto;
+    transition: all 1s;
 }
+
 #platillo1{
     margin-left: 25.5px;
 }

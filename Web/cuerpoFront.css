@@ -29,6 +29,12 @@
     display: block;
     background-color: purple;
     margin: 12px 8px;
+    border-radius: 4px;
+}
+#c1 li :hover{
+    background-color: black;
+    color: white;
+    transition: all 0.3s;
 }
 .cuerpoCaj #enlaceF1{
     padding: 19px 2px;
@@ -79,6 +85,7 @@
     color: white;
     font-weight: bold;
     font-style: italic;
+    border-radius: 4px;
 }
 .cuerpoCaj #tituloC2 {
     text-align: center;
@@ -101,6 +108,10 @@
     background-color: #fcff55;
     margin: 50px 0px 0px 10px;
     text-align: center;
+    border-radius: 4px;
+    outline-color: rgb(98, 153, 10);
+    outline-width: 0.5px;
+    outline-style: solid;
 }
 #c3 #pesoP
 {
