@@ -1,0 +1,13 @@
+.tipoAlimento{
+    background-color: yellow;
+}
+#selectTA2{
+    color: black;
+    border-color:whitesmoke;
+    border-style: solid;
+    border-width: 1px;
+}
+#selectTA6{
+    color: yellow;
+    border-color:yellow ;
+}

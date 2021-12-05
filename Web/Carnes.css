@@ -1,0 +1,13 @@
+.tipoAlimento{
+    background-color: rgb(230, 26, 60);
+}
+#selectTA2{
+    color: black;
+    border-color:whitesmoke;
+    border-style: solid;
+    border-width: 1px;
+}
+#selectTA7{
+    color: rgb(230, 26, 60);
+    border-color:rgb(230, 26, 60) ;
+}

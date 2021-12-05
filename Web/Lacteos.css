@@ -6,7 +6,7 @@
     top: 64px;
     width: 21.5%;
     height: 540px;
-    background-color: black;
+    background-color: gray;
     margin: 54px 0px 0px 10px;
     text-align: center;
     border-radius: 6px;
@@ -40,14 +40,17 @@
 }
 #selectTA1{
     background-color: black;
-    border-color: black;
+    border-color: whitesmoke;
+    color: whitesmoke;
 }
 #selectTA2{
     background-color: gray;
+    border: gray;
+    color: gray;
 }
 #selectTA3{
     background-color: red;
-    color: lightgray;
+    color: cornsilk;
 }
 #selectTA4{
     background-color:green;
@@ -72,8 +75,7 @@
     background-color: orange;
 }
 /*Fin de casillas de selección*/
-/*PLatillos*/
-.platillos{
+.Elementos{
     width: 76%;
     display: inline-block;
     height: auto;
@@ -81,45 +83,17 @@
     background-color: #009468;
     border-radius: 6px;
 }
-.platillosInside{
+.elementoInside{
     display: inline-block;
     background-color: black;
-    width: 22%;    
-    height: 340px;
-    margin: 15px 0px 0px 18px;
+    width: 18%;    
+    height: 180px;
+    margin: 15px 0px 0px 14px;
     border-radius: 6px;
 }
-.platillos div:hover{
+.Elementos :hover{
     outline-color: white;
     outline-width: 4px;
     outline-style: auto;
     transition: all 1s;
-}
-
-#platillo1{
-    margin-left: 25.5px;
-}
-#platillo5{
-    margin-left: 25.5px;
-}
-#platillo9{
-    margin-left: 25.5px;
-}
-#img1{
-    margin: 20px 36px;
-    border-radius: 4px;
-}
-.tituloimg{
-    margin-top: 90px;
-    text-align: center;
-    color: whitesmoke;
-    font-weight: bold;
-    border-bottom: solid whitesmoke;
-    padding-bottom: 10px;
-}
-#listIngredientes{
-    padding-top: 7px;
-    list-style: none;
-    color: whitesmoke;
-    margin-left: 20px;
 }
