@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="navBar.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="cuerpoFront.css">
+    <link rel="stylesheet" href="CpDCalculadora.css">
+    <title>C&C</title>
+</head>
+<body>
+        <!-------------------------------------navBar--------------------------------------------------->
+        <img src="C:\WorkSpace\SE&LI _Project\Web\Media\inicio\Logo.png" width="130.5" height="110" id="imgLogo">
+        <img src="C:\WorkSpace\SE&LI _Project\Web\Media\inicio\ttl.png" width="300" height="110" id="imgTtl">
+            <div class="divNBar">
+                <ul class="barraNavegacion">
+                    <li> <a href="C:\WorkSpace\SE&LI _Project\Web\index.html" id="Inicio"><i><b>Inicio</b></i></a> </li>
+                    <li> <a href="#" id="Calculadora"><b><i>Caluladora</i></b></a> </li>
+                    <li> <a href="file:///C:/WorkSpace/SE&LI%20_Project/Web/CpA_Platillos.html" id="CpA"><i><b>CpA</b></i></a> </li>
+                </ul>
+            </div>
+        <img src="C:\WorkSpace\SE&LI _Project\Web\Media\inicio\ColorBar.png" width="364" height="110" id="imgColor">
+        <!-------------------------------------Fin-navBar-->
+    <!-------------------------------------IMC---------------------------------------------->
+    <div class="cuerpoCaj" id="c3">
+        <p id="encabezado">Índice de Masa Corporal</p>
+        <br>
+        <p id="subtituloMC">Ingrese los datos para</p><p id="subtituloMC">obtener su resultado</p>
+        <p id="alturaP">Altura</p>
+        <input type="number" name="altura" id="num2" placeholder="en metros">
+        <p id="pesoP">Peso</p>
+        <input type="number" name="peso" id="num1" placeholder="en kilos"> <br><br>
+        <input type="button" value="Calcular" id=btnIMC"" onclick="InMC()"> <br><br>
+        <input type="text" name="resultado" id="res" readonly="" placeholder="Resultado"> <br><br>
+        <div id="diagnosSep"> 
+            <br>
+            <p>Diagnóstico</p> <br>
+            <input type="text" id="diagnostico" placeholder="---" readonly="">
+        </div>
+    </div>
+    <script type="text/javascript">
+        function InMC(){
+            var peso = document.getElementById('num1').value;
+            var altura = document.getElementById('num2').value;
+            if (peso <= 0 || altura <= 0)
+            {
+                alert("Imposible que su peso/altura sea 0 o inferior...");
+            }
+            else if (peso > 600) {
+                alert("Peso exorbitante, introduzca su peso real en Kg");
+            }
+            else if (altura > 2.7) {
+                alert("Altura exorbitante, introduzca su altura real en metros");
+            }
+            else{
+                IMC=peso / Math.pow(altura,2)
+                
+                document.getElementById('res').value = IMC.toFixed(2);
+                if (IMC < 18.5)
+                {
+                    document.getElementById('diagnostico').value="Bajo Peso";
+                }
+                else if (IMC > 18.5 && IMC <= 24.9){
+                    document.getElementById('diagnostico').value="Peso Normal";
+                }
+                else if (IMC > 25.0 && IMC <= 29.9){
+                    document.getElementById('diagnostico').value="Sobrepeso";
+                }
+                else if (IMC > 29.9){
+                    document.getElementById('diagnostico').value="Obesidad";
+                }
+            }
+            
+        }
+    </script>
+    <!-------------------------------------Fin-IMC------------------------------------------>
+    <!-------------------------------------Inicio-Calculadora------------------------------------------>
+    <div id="wrapCal">
+    <form class="calculadora" id="genero" name="selectGen">
+        <p>Hombre: <input type="radio" id="g1" name="grupoGen" value="1" checked></p>
+        <p>Mujer: <input type="radio" id="g2" name="grupoGen" value="2"></p>
+        <p>Sedentario: <input type="radio" id="fA1" name="factorAct" value="1.2"></p>
+        <p>Poca: <input type="radio" id="fA2" name="factorAct" value="1.375"></p>
+        <p>Moderada: <input type="radio" id="fA3" name="factorAct" value="1.55"></p>
+        <p>Intensa: <input type="radio" id="fA4" name="factorAct" value="1.725"></p>
+        <p>Atleta: <input type="radio" id="fA5" name="factorAct" value="1.9"></p>
+    </form>
+    </div>

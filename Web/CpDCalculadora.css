@@ -1,0 +1,10 @@
+* { margin:0; padding:0; box-sizing:border-box; }
+#wrapCal{
+    position: fixed;
+background-color: gray;
+    top: 180px;
+}
+.calculadora input{
+    padding: 20px;
+    background: green;
+}

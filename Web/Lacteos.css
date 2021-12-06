@@ -91,9 +91,28 @@
     margin: 15px 0px 0px 14px;
     border-radius: 6px;
 }
-.Elementos :hover{
+.Elementos div:hover{
     outline-color: white;
     outline-width: 4px;
     outline-style: auto;
     transition: all 1s;
+}
+.imgL{
+    margin-top: 7px;
+    margin-left: 7px;
+    border-radius: 4px;
+}
+.nombreElmnt{
+    display: inline-block;
+    margin-top: 42px;
+    margin-left: 10px;
+    color: blanchedalmond;
+    font-weight: bold;
+}
+.kpg{
+    color: blanchedalmond;
+    margin-left: 35px;
+}
+#gtok{
+    margin-top: 44px;
 }
