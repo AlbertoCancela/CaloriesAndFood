@@ -77,14 +77,81 @@
     </script>
     <!-------------------------------------Fin-IMC------------------------------------------>
     <!-------------------------------------Inicio-Calculadora------------------------------------------>
-    <div id="wrapCal">
-    <form class="calculadora" id="genero" name="selectGen">
-        <p>Hombre: <input type="radio" id="g1" name="grupoGen" value="1" checked></p>
-        <p>Mujer: <input type="radio" id="g2" name="grupoGen" value="2"></p>
-        <p>Sedentario: <input type="radio" id="fA1" name="factorAct" value="1.2"></p>
-        <p>Poca: <input type="radio" id="fA2" name="factorAct" value="1.375"></p>
-        <p>Moderada: <input type="radio" id="fA3" name="factorAct" value="1.55"></p>
-        <p>Intensa: <input type="radio" id="fA4" name="factorAct" value="1.725"></p>
-        <p>Atleta: <input type="radio" id="fA5" name="factorAct" value="1.9"></p>
+    <div class="wrap">
+    <form action="" class="calculadora">
+    <div class="radio"">
+        <div class="genero">
+            <h3>Género</h3>
+            <input type="radio" name="grupoGen" id="Hombre" value="1">
+            <label for="Hombre">Hombre</label>
+
+            <input type="radio" id="g2" name="grupoGen" value="2">
+            <label for="g2">Mujer</label>
+        </div>
+        <div class="fActividad">
+            <h3>Factor Actividad</h3>
+            <input type="radio" id="fA1" name="factorAct" value="1.2">
+            <label for="fA1">Sedentario</label>
+
+            <input type="radio" id="fA2" name="factorAct" value="1.375">
+            <label for="fA2">Leve</label>
+
+            <input type="radio" id="fA3" name="factorAct" value="1.55">
+            <label for="fA3">Moderado</label>
+
+            <input type="radio" id="fA4" name="factorAct" value="1.725">
+            <label for="fA4">Intenso</label>
+
+            <input type="radio" id="fA5" name="factorAct" value="1.9">
+            <label for="fA5">Atleta</label>
+        </div>
+        <div class="datosGral">
+            <h4><u>______________Peso______________________Altura______________________Edad_________</u></h4>
+            <input type="number" name="CPDpeso" id="cpd1" placeholder="en kilos">
+            <input type="number" name="CPDaltura" id="cpd2" placeholder="en metros">
+            <input type="number" name="CPDedad" id="cpd3" placeholder="">
+            <input type="button" id="btnCPD" value="Calcular!" onclick="Final()">
+            <br><br><h4 style="color: #135da1;">___________________________________________Calorías recomendadas por día______________________________________</h4>
+            <br><h4>________________Bajar de peso______________________Mantener peso_____________________Subir de peso______________</h4>
+            <p id="lascalorias">Las calorías que deberías <br> comer al día para <b>perder</b> <br> peso son...</p>
+            <p id="lascalorias">Las calorías que deberías <br> comer al día para <b>mantener</b> <br> peso son...</p>
+            <p id="lascalorias">Las calorías que deberías <br> comer al día para <b>ganar</b> <br> peso son...</p>
+            <div class="resultados">
+                <input type="text" name="perder" id="p" placeholder="- - - - ">
+                <input type="text" name="mantener" id="m" placeholder="- - - - ">
+                <input type="text" name="ganar" id="g" placeholder="- - - - ">
+            </div>
+        </div>
+    </div>
     </form>
     </div>
+    <script type="text/javascript">
+        function Final(){
+            var seleccionG = document.querySelector('input[name="grupoGen"]:checked').value;
+            var seleccionFA = document.querySelector('input[name="factorAct"]:checked').value;
+            var intG, pesoG, altG, edadG;
+            if (seleccionG==1){
+                intG=66;
+                pesoG=13.7;
+                altG=5;
+                edadG=6.8;
+            }
+            else if(seleccionG==2)
+            {
+                intG=655;
+                pesoG=9.6;
+                altG=1.8;
+                edadG=4.7;
+            }
+            var PesoCPD = document.getElementById('cpd1').value;
+            var AlturaCPD = document.getElementById('cpd2').value;
+            var EdadCPD = document.getElementById('cpd3').value;
+            
+            AlturaCPD *= 100
+            var resFinal = (intG+(pesoG*PesoCPD)+(altG*AlturaCPD)-(edadG*EdadCPD))*seleccionFA;
+            
+            document.getElementById('p').value=(resFinal-(resFinal/5)).toFixed(2)
+            document.getElementById('m').value=resFinal.toFixed(2)
+            document.getElementById('g').value=(resFinal+(resFinal/5)).toFixed(2)
+        }
+    </script>
