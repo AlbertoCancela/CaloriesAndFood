@@ -79,6 +79,7 @@
     <!-------------------------------------Inicio-Calculadora------------------------------------------>
     <div class="wrap">
     <form action="" class="calculadora">
+        <h2>¿Cuántas calorías por día (CPD) debo consumir?</h2>
     <div class="radio"">
         <div class="genero">
             <h3>Género</h3>
@@ -109,17 +110,17 @@
             <h4><u>______________Peso______________________Altura______________________Edad_________</u></h4>
             <input type="number" name="CPDpeso" id="cpd1" placeholder="en kilos">
             <input type="number" name="CPDaltura" id="cpd2" placeholder="en metros">
-            <input type="number" name="CPDedad" id="cpd3" placeholder="">
+            <input type="number" name="CPDedad" id="cpd3" placeholder="en años">
             <input type="button" id="btnCPD" value="Calcular!" onclick="Final()">
-            <br><br><h4 style="color: #135da1;">___________________________________________Calorías recomendadas por día______________________________________</h4>
+            <br><br><h4 style="color: #043664;">___________________________________________Calorías recomendadas por día______________________________________</h4>
             <br><h4>________________Bajar de peso______________________Mantener peso_____________________Subir de peso______________</h4>
             <p id="lascalorias">Las calorías que deberías <br> comer al día para <b>perder</b> <br> peso son...</p>
             <p id="lascalorias">Las calorías que deberías <br> comer al día para <b>mantener</b> <br> peso son...</p>
             <p id="lascalorias">Las calorías que deberías <br> comer al día para <b>ganar</b> <br> peso son...</p>
             <div class="resultados">
-                <input type="text" name="perder" id="p" placeholder="- - - - ">
-                <input type="text" name="mantener" id="m" placeholder="- - - - ">
-                <input type="text" name="ganar" id="g" placeholder="- - - - ">
+                <input type="text" name="perder" id="p" placeholder="- - - - " readonly>
+                <input type="text" name="mantener" id="m" placeholder="- - - - " readonly>
+                <input type="text" name="ganar" id="g" placeholder="- - - - " readonly>
             </div>
         </div>
     </div>
@@ -130,7 +131,26 @@
             var seleccionG = document.querySelector('input[name="grupoGen"]:checked').value;
             var seleccionFA = document.querySelector('input[name="factorAct"]:checked').value;
             var intG, pesoG, altG, edadG;
-            if (seleccionG==1){
+            var PesoCPD = document.getElementById('cpd1').value;
+            var AlturaCPD = document.getElementById('cpd2').value;
+            var EdadCPD = document.getElementById('cpd3').value;
+            //Condiciones
+            if (PesoCPD <= 0 || AlturaCPD <= 0)
+            {
+                alert("Imposible que su peso/altura sea 0 o inferior...");
+            }
+            else if (PesoCPD > 600) {
+                alert("Peso exorbitante, introduzca su peso real en Kilogramos");
+            }
+            else if (AlturaCPD > 2.7) {
+                alert("Altura exorbitante, introduzca su altura real en metros");
+            }
+            else if(EdadCPD < 0 || EdadCPD > 122){
+                alert("O no has nacido o acabas de romper un récord. Por favor, introduce tu edad real en años.");
+            }
+            //
+            else{
+                if (seleccionG==1){
                 intG=66;
                 pesoG=13.7;
                 altG=5;
@@ -143,15 +163,41 @@
                 altG=1.8;
                 edadG=4.7;
             }
-            var PesoCPD = document.getElementById('cpd1').value;
-            var AlturaCPD = document.getElementById('cpd2').value;
-            var EdadCPD = document.getElementById('cpd3').value;
             
             AlturaCPD *= 100
             var resFinal = (intG+(pesoG*PesoCPD)+(altG*AlturaCPD)-(edadG*EdadCPD))*seleccionFA;
             
-            document.getElementById('p').value=(resFinal-(resFinal/5)).toFixed(2)
+            document.getElementById('p').value=(resFinal-(resFinal/6)).toFixed(2)
             document.getElementById('m').value=resFinal.toFixed(2)
-            document.getElementById('g').value=(resFinal+(resFinal/5)).toFixed(2)
+            document.getElementById('g').value=(resFinal+(resFinal/6)).toFixed(2)
+            }
         }
     </script>
+    <div class="xd"></div>
+    <div class="xd"></div>
+    <div class="xd"></div>
+    <div class="xd"></div>
+    <footer>
+        <div class="footerContainer">
+            <div class="footerMain">
+                <div class="footerColumna">
+                    <h3>Acerca de...</h3>
+                    <p>Proyecto realizado con fines meramente educativos, no hay ninguna intención lucrativa detrás de este.</p>
+                </div>
+                <div class="footerColumna" id="contact">
+                    <h3>Contacto</h3>
+                    <span class="fa fa-phone"><p>744*****95</p></span>
+                    <span class="fa fa-envelope"><p>poezeppeli@gmail.com</p></span>
+                </div>
+                <div class="footerColumna">
+                    <h3>Derechos de autor</h3>
+                    <p>Todos los derechos reservados. Ninguna de las imagenes
+                        presentadas es de nuestra propiedad.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+    </body>
+    </html>

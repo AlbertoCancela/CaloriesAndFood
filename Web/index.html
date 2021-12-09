@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="cuerpoFront.css">
     <title>C&C</title>
+    <link rel="stylesheet" href="">
 </head>
 <body>
     <!-------------------------------------navBar--------------------------------------------------->
@@ -36,9 +37,52 @@
     </div>
     <div class="cuerpoCaj" id="c2">
         <p id="tituloC2">Ejemplo de comidas al día en relación a sus calorías</p>
-        <div class="contenidoC2">Desayuno</div>
-        <div class="contenidoC2">Comida</div>
-        <div class="contenidoC2">Cena</div>
+        <div class="contenidoC2">Desayuno<br>
+            <img id="img2" src="C:\WorkSpace\SE&LI _Project\Web\Platillos\HuevosEstToci.jpg" height="110px" width="180px">
+            <h3>Huevos con Tocino</h3>
+            <ul id="listIngredientes">
+                <li>1 Huevo...................80kcal</li>
+                <li>tocino 100g............541kcal</li>
+                <li>- -</li>
+                <li>- -</li>
+                <li>- -</li>
+                <li>- -</li>
+                <li>- -</li>
+                <li>- -</li>
+                <li class="total">Total: .................... <b>621kcal</b></li>
+            </ul>
+        </div>
+        <div class="contenidoC2">Comida <br>
+            <img id="img2" src="C:\WorkSpace\SE&LI _Project\Web\Platillos\SpahettiBolognesa.jpg" height="110px" width="180px">
+            <h3>Spaghetti a la Bolognesa</h3>
+            <ul id="listIngredientes">
+                <li>Carne res m. 200g...500kcal</li>
+                <li>4 Tomates..................72kcal</li>
+                <li>Spaghetti 300g........474kcal</li>
+                <li>- -</li>
+                <li>- -</li>
+                <li>- -</li>
+                <li>- -</li>
+                <li>- -</li>
+                <li class="total">Total: ................... <b>1046kcal</b></li>
+            </ul>
+            
+        </div>
+        <div class="contenidoC2">Cena <br>
+            <img id="img2" src="C:\WorkSpace\SE&LI _Project\Web\Platillos\LicPlat.jpg" height="110px" width="180px">
+            <h3>Licuado de plátano</h3>
+            <ul id="listIngredientes">
+                <li>2 plátanos...............162kcal</li>
+                <li>Leche 250ml..........100kcal</li>
+                <li>- -</li>
+                <li>- -</li>
+                <li>- -</li>
+                <li>- -</li>
+                <li>- -</li>
+                <li>- -</li>
+                <li class="total">Total: .................... <b>262kcal</b></li>
+            </ul>
+        </div>
     </div>
     <script type="text/javascript">
         function InMC(){
@@ -157,8 +201,28 @@
         </P>
     </div>
     <div class="xd"></div>
-    <div class="xd"></div>
-    <div class="xd"></div>
-    <footer></footer>
+    
+    <footer>
+        <div class="footerContainer">
+            <div class="footerMain">
+                <div class="footerColumna">
+                    <h3>Acerca de...</h3>
+                    <p>Proyecto realizado con fines meramente educativos, no hay ninguna intención lucrativa detrás de este.</p>
+                </div>
+                <div class="footerColumna" id="contact">
+                    <h3>Contacto</h3>
+                    <span class="fa fa-phone"><p>744*****95</p></span>
+                    <span class="fa fa-envelope"><p>poezeppeli@gmail.com</p></span>
+                </div>
+                <div class="footerColumna">
+                    <h3>Derechos de autor</h3>
+                    <p>Todos los derechos reservados. Ninguna de las imagenes
+                        presentadas es de nuestra propiedad.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </footer>
 </body>
 </html>
